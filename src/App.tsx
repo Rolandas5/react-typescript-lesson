@@ -6,6 +6,8 @@ import { UserProfile } from './components/UserProfile';
 import UserForm from './components/UserForm';
 import { Alert } from './components/Alert';
 import { UserRoleBadge } from './components/UserRoleBadge';
+import { ShippingStatus } from './components/ShippingStatus/ShippingStatus';
+import { ShippingStatusEnum } from './components/ShippingStatus/types';
 
 // User interfeisas
 interface User {
@@ -41,6 +43,10 @@ function App() {
       <Alert type="success" message="Sekmė!" />
       <Alert type="warning" message="Normalu" />
       <Alert type="error" message="Sugedo!" />
+      <br />
+      <ShippingStatus id={312} status={ShippingStatusEnum.Pending} />
+      <ShippingStatus id={312} status={ShippingStatusEnum.Canceled} />
+      <br />
       <UserProfile name="Rolandas" age={27} isActive={true} />
       <UserProfile name="Tomas" isActive={false} />
       <List items={['obuolys', 'kriaušė', 'bananas', 1]} />
