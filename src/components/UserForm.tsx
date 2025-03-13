@@ -38,7 +38,7 @@ const UserForm: React.FC<UserFormProps> = ({ onSubmit }) => {
         <input
           type="number"
           value={age}
-          onChange={(event) => setAge(Number(event.target.value))}
+          onChange={(event) => setAge(event.target.value)}
           required
         />
       </div>
