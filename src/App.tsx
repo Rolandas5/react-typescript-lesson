@@ -8,6 +8,8 @@ import { Alert } from './components/Alert';
 import { UserRoleBadge } from './components/UserRoleBadge';
 import { ShippingStatus } from './components/ShippingStatus/ShippingStatus';
 import { ShippingStatusEnum } from './components/ShippingStatus/types';
+import { StatusBadge } from './components/StatusBadge/StatusBadge';
+import { TaskStatusEnum } from './components/StatusBadge/status';
 
 // User interfeisas
 interface User {
@@ -46,6 +48,10 @@ function App() {
       <br />
       <ShippingStatus id={312} status={ShippingStatusEnum.Pending} />
       <ShippingStatus id={312} status={ShippingStatusEnum.Canceled} />
+      <br />
+      <StatusBadge status={TaskStatusEnum.Status} />
+      <StatusBadge status={TaskStatusEnum.InProgress} />
+      <StatusBadge status={TaskStatusEnum.Completed} />
       <br />
       <UserProfile name="Rolandas" age={27} isActive={true} />
       <UserProfile name="Tomas" isActive={false} />
