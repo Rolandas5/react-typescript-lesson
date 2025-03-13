@@ -15,6 +15,7 @@ const UserForm: React.FC<UserFormProps> = ({ onSubmit }) => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    // Number(age) reiškia, kad age, kuris yra eilutė (string), paverčiamas į skaičių (number).
     const userData: User = { name, age: Number(age) };
     onSubmit(userData);
     setName('');

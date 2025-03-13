@@ -4,6 +4,8 @@ import { List } from './components/List';
 import { ObjectList } from './components/ObjectList';
 import { UserProfile } from './components/UserProfile';
 import UserForm from './components/UserForm';
+import { Alert } from './components/Alert';
+import { UserRoleBadge } from './components/UserRoleBadge';
 
 // User interfeisas
 interface User {
@@ -30,6 +32,15 @@ function App() {
     <>
       <ProductList items={items} />
       <UserForm onSubmit={handleUserSubmit} />
+      <br />
+      <UserRoleBadge role="admin" name="Rolandas" />
+      <UserRoleBadge role="editor" name="Tomas" />
+      <UserRoleBadge role="viewer" name="Gabija" />
+      <br />
+      <br />
+      <Alert type="success" message="Sekmė!" />
+      <Alert type="warning" message="Normalu" />
+      <Alert type="error" message="Sugedo!" />
       <UserProfile name="Rolandas" age={27} isActive={true} />
       <UserProfile name="Tomas" isActive={false} />
       <List items={['obuolys', 'kriaušė', 'bananas', 1]} />
