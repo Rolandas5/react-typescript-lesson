@@ -10,12 +10,20 @@ import { ShippingStatus } from './components/ShippingStatus/ShippingStatus';
 import { ShippingStatusEnum } from './components/ShippingStatus/types';
 import { StatusBadge } from './components/StatusBadge/StatusBadge';
 import { TaskStatusEnum } from './components/StatusBadge/status';
+import { ProductCard } from './components/ProductCard/ProductCard';
+import { ProductCategory } from './components/ProductCard/category';
 
 // User interfeisas
 interface User {
   name: string;
   age: number;
 }
+
+const sampleProduct = {
+  name: 'Laptop',
+  category: ProductCategory.Electronics,
+  price: 999.99,
+};
 
 function App() {
   const items = [
@@ -52,6 +60,8 @@ function App() {
       <StatusBadge status={TaskStatusEnum.Status} />
       <StatusBadge status={TaskStatusEnum.InProgress} />
       <StatusBadge status={TaskStatusEnum.Completed} />
+      <br /><br />
+      <ProductCard product={sampleProduct} />
       <br />
       <UserProfile name="Rolandas" age={27} isActive={true} />
       <UserProfile name="Tomas" isActive={false} />
